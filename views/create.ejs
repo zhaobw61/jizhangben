@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>添加记录</title>
+</head>
+<body>
+  <form action="/account" method="post">
+    <h1>添加记录</h1>
+    <p>事项</p>
+    <input name="title" type="text">
+    <br/>
+    <p>发生时间</p>
+    <input name="time" type="text">
+    <br/>
+    <p>类型</p>
+    <span>-1 是支出 和 1 是收入</span>
+    <br/>
+    <input name="type" type="text">
+    <br/>
+    <p>金额</p>
+    <input name="account" type="text">
+    <br/>
+    <p>备注</p>
+    <input name="remarks" type="text">
+    <br/>
+    <button onclick="asdasd()">添加</button>
+  </form>
+</body>
+<script>
+  function asdasd() {
+    console.log('params')
+  }
+</script>
+</html>

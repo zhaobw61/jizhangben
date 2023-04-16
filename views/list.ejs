@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>记账本</title>
+</head>
+<body>
+  <h1>记账本</h1>
+  <ol>
+    <% accounts.forEach(item => { %>
+    <li>
+      <p>时间：<%= moment(item.time).format('YYYY-MM-DD') %></p>
+      <p>事件：<%= item.title %></p>
+      <p><%= item.remarks %></p>
+      <p><%= item.type == -1 ? '支出' : '收入'%></p>
+      <p><%= item.account %></p>
+      <button>
+        <a href="/account/<%= item._id %>">
+          DELETE
+        </a>
+      </button>
+    </li>
+    <% }) %>
+  </ol>
+</body>
+</html>
